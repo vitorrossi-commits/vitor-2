@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA Automação | Soluções Industriais</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0b0f14;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 20, 0.95);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #1d2733;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00aaff;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(11,15,20,.75), rgba(11,15,20,.95)),
+                url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00aaff;
+        }
+
+        .hero p {
+            color: #b8c1cc;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #00aaff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0088cc;
+        }
+
+        /* TITULOS */
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #9ca7b3;
+        }
+
+        /* QUEM SOMOS */
+
+        .about {
+            background: #10161d;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #b8c1cc;
+            font-size: 18px;
+        }
+
+        /* SOLUÇÕES */
+
+        .solutions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #151d26;
+            padding: 35px;
+            border: 1px solid #263341;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00aaff;
+        }
+
+        .card h3 {
+            color: #00aaff;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #aeb8c4;
+        }
+
+        /* DIFERENCIAL */
+
+        .differential {
+            background: #10161d;
+        }
+
+        .differential-list {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .difference {
+            background: #151d26;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .difference h3 {
+            margin-bottom: 8px;
+            color: #00aaff;
+        }
+
+        .difference p {
+            color: #aeb8c4;
+        }
+
+        /* CONTATO */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: #151d26;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-box p {
+            margin: 12px 0;
+            color: #c0c8d1;
+        }
+
+        .contact-box strong {
+            color: #00aaff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1d2733;
+            color: #778391;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                margin-left: 12px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .solutions {
+                grid-template-columns: 1fr;
+            }
+
+            .differential-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <div class="logo">NEXORA</div>
+
+        <nav>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#diferencial">Diferencial</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>
+                Automação inteligente para uma
+                <span>indústria eficiente.</span>
+            </h1>
+
+            <p>
+                Desenvolvemos soluções em automação industrial,
+                robótica e manipulação para tornar processos
+                mais produtivos, seguros e eficientes.
+            </p>
+
+            <a href="#contato" class="button">
+                Fale Conosco
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- QUEM SOMOS -->
+
+    <section class="about" id="quem-somos">
+
+        <div class="title">
+            <h2>Quem Somos</h2>
+            <p>Engenharia, tecnologia e inovação.</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                A <strong>NEXORA Automação</strong> é uma empresa
+                especializada em soluções de automação industrial.
+                Atuamos no desenvolvimento de projetos personalizados
+                para melhorar a produtividade e a eficiência dos
+                processos industriais.
+            </p>
+
+            <br>
+
+            <p>
+                Unimos engenharia, robótica e tecnologia para criar
+                equipamentos e sistemas preparados para os desafios
+                da indústria moderna.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOLUÇÕES -->
+
+    <section id="solucoes">
+
+        <div class="title">
+            <h2>Nossas Soluções</h2>
+            <p>Tecnologia aplicada às necessidades da sua indústria.</p>
+        </div>
+
+        <div class="solutions">
+
+            <div class="card">
+                <h3>Automação Industrial</h3>
+                <p>
+                    Desenvolvimento de sistemas automatizados
+                    para otimizar processos e aumentar a produtividade.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Robótica Integrada</h3>
+                <p>
+                    Integração de robôs industriais em linhas de
+                    produção, montagem e movimentação.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Pick & Place</h3>
+                <p>
+                    Sistemas de manipulação automatizada para
+                    movimentação rápida e precisa de produtos.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DIFERENCIAL -->
+
+    <section class="differential" id="diferencial">
+
+        <div class="title">
+            <h2>Nosso Diferencial</h2>
+            <p>Mais do que tecnologia, entregamos soluções.</p>
+        </div>
+
+        <div class="differential-list">
+
+            <div class="difference">
+                <h3>Projetos Personalizados</h3>
+                <p>
+                    Cada solução é desenvolvida de acordo com
+                    a necessidade específica do cliente.
+                </p>
+            </div>
+
+            <div class="difference">
+                <h3>Alta Precisão</h3>
+                <p>
+                    Sistemas desenvolvidos para oferecer
+                    eficiência, repetibilidade e confiabilidade.
+                </p>
+            </div>
+
+            <div class="difference">
+                <h3>Integração</h3>
+                <p>
+                    Integramos robótica, automação e equipamentos
+                    em uma única solução.
+                </p>
+            </div>
+
+            <div class="difference">
+                <h3>Foco em Resultados</h3>
+                <p>
+                    Nosso objetivo é reduzir custos, aumentar
+                    produtividade e melhorar os processos.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact" id="contato">
+
+        <div class="title">
+            <h2>Entre em Contato</h2>
+            <p>Vamos desenvolver a solução ideal para sua empresa.</p>
+        </div>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>E-mail:</strong>
+                contato@nexora.com.br
+            </p>
+
+            <p>
+                <strong>Telefone:</strong>
+                +55 (00) 00000-0000
+            </p>
+
+            <p>
+                <strong>Atendimento:</strong>
+                Segunda a sexta, das 8h às 18h
+            </p>
+
+            <br>
+
+            <a href="mailto:contato@nexora.com.br" class="button">
+                Enviar E-mail
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        © 2026 NEXORA Automação — Todos os direitos reservados.
+        <br>
+        Versão 1.0
+
+    </footer>
+
+</body>
+</html>
